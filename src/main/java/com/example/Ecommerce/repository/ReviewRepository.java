@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
-
+@Repository
 public interface ReviewRepository extends JpaRepository<ReviewModel,Long > {
     List<ReviewModel> findByItem(ItemModel item);
     @Query("SELECT AVG(rating)  FROM ReviewModel WHERE item=:item")
