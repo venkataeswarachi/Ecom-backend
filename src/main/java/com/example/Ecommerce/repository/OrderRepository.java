@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
-
+@Repository
 public interface OrderRepository extends JpaRepository<OrderModel,Long> {
     @Query("SELECT o FROM OrderModel o WHERE o.buyer = :buyer AND o.status = True")
     List<OrderModel> findByBuyer(@Param("buyer") UserModel buyer);
