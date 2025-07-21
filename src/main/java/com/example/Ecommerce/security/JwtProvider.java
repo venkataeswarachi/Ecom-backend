@@ -14,7 +14,7 @@ import java.util.Date;
 @Component
 public class JwtProvider {
 
-    @Value("${secret}")
+    @Value("${SECRET}")
     private String secret;
 
     private Key signingKey;
