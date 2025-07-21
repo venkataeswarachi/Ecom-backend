@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
-
+@Repository
 public interface ItemRepository extends JpaRepository<ItemModel,Long> {
     List<ItemModel> findByitemIdIn(List<Long> itemIds);
     List<ItemModel> findByCategory(String category);
