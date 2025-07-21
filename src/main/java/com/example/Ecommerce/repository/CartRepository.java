@@ -6,7 +6,7 @@ import com.example.Ecommerce.payload.ItemDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
-
+@Repository
 public interface CartRepository extends JpaRepository<CartModel,Long> {
     List<CartModel> findByUser(UserModel userModel);
 }
